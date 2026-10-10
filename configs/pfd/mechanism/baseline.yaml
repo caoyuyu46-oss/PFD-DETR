@@ -1,0 +1,4 @@
+_base_: ../base.yaml
+experiment: mechanism_baseline
+model:
+  variant: baseline

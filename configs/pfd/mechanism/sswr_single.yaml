@@ -1,0 +1,7 @@
+_base_: ../base.yaml
+experiment: mechanism_sswr_single
+model:
+  sswr:
+    mode: single
+    windows:
+    - 5

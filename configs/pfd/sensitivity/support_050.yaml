@@ -1,0 +1,5 @@
+_base_: ../base.yaml
+experiment: sensitivity_support_050
+model:
+  rdpf:
+    support_gain: 0.5

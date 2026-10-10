@@ -1,0 +1,11 @@
+_base_: ../base.yaml
+experiment: mechanism_dual_capacity
+model:
+  variant: dual_capacity
+  sswr:
+    mode: plain_residual
+    hidden: 41
+  rdpf:
+    mode: plain_residual
+    plain_hidden: 96
+    support_gain: 0.0

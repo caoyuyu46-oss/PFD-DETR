@@ -1,0 +1,283 @@
+{
+  "wtconv": {
+    "architecture": "paper_v716",
+    "variant": "full",
+    "model_configuration": {
+      "architecture": "paper_v716",
+      "variant": "full",
+      "image_size": 640,
+      "num_classes": 1,
+      "num_queries": 300,
+      "decoder_layers": 3,
+      "sswr": {
+        "hidden": 32,
+        "windows": [
+          3,
+          5,
+          9
+        ],
+        "gate_floor": 0.1,
+        "mode": "wtconv",
+        "kernel_size": 5,
+        "wt_levels": 1,
+        "wt_type": "db1",
+        "bias": true
+      },
+      "rdpf": {
+        "hidden": 64,
+        "floor": 0.1,
+        "mode": "full",
+        "target": "truncated_gaussian",
+        "loss": "balanced",
+        "support_gain": 0.25
+      }
+    },
+    "input_shape": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "mode": "eval",
+    "parameters": 20150038,
+    "stored_parameters": 20154134,
+    "frozen_parameters": 4096,
+    "trainable_parameters": 20150038,
+    "MACs": 29297024000,
+    "GFLOPs": 58.594048,
+    "scope": "conv-linear",
+    "thop_hook_parameter_count_not_used": 19063956,
+    "fixed_transforms_and_functional_operators_counted": false,
+    "scope_detail": "Executed nn.Conv2d and nn.Linear hooks only; excludes normalization, activations, pooling, fixed Haar/Sobel, local statistics, spatial rearrangement, interpolation, elementwise operations, attention matrix products, functional projections inside MultiheadAttention, and sampling operations.",
+    "components": {
+      "backbone": {
+        "MACs": 16906649600,
+        "GFLOPs": 33.8132992
+      },
+      "decoder": {
+        "MACs": 3630259200,
+        "GFLOPs": 7.2605184
+      },
+      "encoder": {
+        "MACs": 8760115200,
+        "GFLOPs": 17.5202304
+      }
+    },
+    "runtime": {
+      "python": "3.11.14",
+      "torch": "2.1.2+cpu",
+      "thop": "0.1.1-2209072238"
+    },
+    "accuracy_or_latency_measured": false,
+    "forward_backward_smoke": "passed"
+  },
+  "freqfusion": {
+    "architecture": "paper_v716",
+    "variant": "full",
+    "model_configuration": {
+      "architecture": "paper_v716",
+      "variant": "full",
+      "image_size": 640,
+      "num_classes": 1,
+      "num_queries": 300,
+      "decoder_layers": 3,
+      "sswr": {
+        "hidden": 32,
+        "windows": [
+          3,
+          5,
+          9
+        ],
+        "gate_floor": 0.1,
+        "mode": "full"
+      },
+      "rdpf": {
+        "hidden": 64,
+        "floor": 0.1,
+        "mode": "freqfusion",
+        "target": "truncated_gaussian",
+        "loss": "balanced",
+        "support_gain": 0.0,
+        "compressed_channels": 64,
+        "lowpass_kernel": 5,
+        "highpass_kernel": 3,
+        "feature_resample": true
+      }
+    },
+    "input_shape": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "mode": "eval",
+    "parameters": 20199171,
+    "stored_parameters": 20199171,
+    "frozen_parameters": 0,
+    "trainable_parameters": 20199171,
+    "MACs": 29415004800,
+    "GFLOPs": 58.8300096,
+    "scope": "conv-linear",
+    "thop_hook_parameter_count_not_used": 19113905,
+    "fixed_transforms_and_functional_operators_counted": false,
+    "scope_detail": "Executed nn.Conv2d and nn.Linear hooks only; excludes normalization, activations, pooling, fixed Haar/Sobel, local statistics, spatial rearrangement, interpolation, elementwise operations, attention matrix products, functional projections inside MultiheadAttention, and sampling operations.",
+    "components": {
+      "backbone": {
+        "MACs": 16923254400,
+        "GFLOPs": 33.8465088
+      },
+      "decoder": {
+        "MACs": 3630259200,
+        "GFLOPs": 7.2605184
+      },
+      "encoder": {
+        "MACs": 8861491200,
+        "GFLOPs": 17.7229824
+      }
+    },
+    "runtime": {
+      "python": "3.11.14",
+      "torch": "2.1.2+cpu",
+      "thop": "0.1.1-2209072238"
+    },
+    "accuracy_or_latency_measured": false,
+    "forward_backward_smoke": "passed"
+  },
+  "p2_decoding": {
+    "architecture": "paper_v716",
+    "variant": "p2_decoding",
+    "model_configuration": {
+      "architecture": "paper_v716",
+      "variant": "p2_decoding",
+      "image_size": 640,
+      "num_classes": 1,
+      "num_queries": 300,
+      "decoder_layers": 3,
+      "sswr": {
+        "hidden": 32,
+        "windows": [
+          3,
+          5,
+          9
+        ],
+        "gate_floor": 0.1,
+        "mode": "full"
+      },
+      "rdpf": {
+        "hidden": 64,
+        "floor": 0.1,
+        "mode": "full",
+        "target": "truncated_gaussian",
+        "loss": "balanced",
+        "support_gain": 0.25
+      }
+    },
+    "input_shape": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "mode": "eval",
+    "parameters": 20173684,
+    "stored_parameters": 20173684,
+    "frozen_parameters": 0,
+    "trainable_parameters": 20173684,
+    "MACs": 36095974400,
+    "GFLOPs": 72.1919488,
+    "scope": "conv-linear",
+    "thop_hook_parameter_count_not_used": 19088370,
+    "fixed_transforms_and_functional_operators_counted": false,
+    "scope_detail": "Executed nn.Conv2d and nn.Linear hooks only; excludes normalization, activations, pooling, fixed Haar/Sobel, local statistics, spatial rearrangement, interpolation, elementwise operations, attention matrix products, functional projections inside MultiheadAttention, and sampling operations.",
+    "components": {
+      "backbone": {
+        "MACs": 16865689600,
+        "GFLOPs": 33.7313792
+      },
+      "decoder": {
+        "MACs": 10789248000,
+        "GFLOPs": 21.578496
+      },
+      "encoder": {
+        "MACs": 8441036800,
+        "GFLOPs": 16.8820736
+      }
+    },
+    "runtime": {
+      "python": "3.11.14",
+      "torch": "2.1.2+cpu",
+      "thop": "0.1.1-2209072238"
+    },
+    "accuracy_or_latency_measured": false,
+    "forward_backward_smoke": "passed"
+  },
+  "dual_capacity": {
+    "architecture": "paper_v716",
+    "variant": "dual_capacity",
+    "model_configuration": {
+      "architecture": "paper_v716",
+      "variant": "dual_capacity",
+      "image_size": 640,
+      "num_classes": 1,
+      "num_queries": 300,
+      "decoder_layers": 3,
+      "sswr": {
+        "hidden": 41,
+        "windows": [
+          3,
+          5,
+          9
+        ],
+        "gate_floor": 0.1,
+        "mode": "plain_residual"
+      },
+      "rdpf": {
+        "hidden": 64,
+        "floor": 0.1,
+        "mode": "plain_residual",
+        "target": "truncated_gaussian",
+        "loss": "balanced",
+        "support_gain": 0.0,
+        "plain_hidden": 96
+      }
+    },
+    "input_shape": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "mode": "eval",
+    "parameters": 20146777,
+    "stored_parameters": 20146777,
+    "frozen_parameters": 0,
+    "trainable_parameters": 20146777,
+    "MACs": 29340652800,
+    "GFLOPs": 58.6813056,
+    "scope": "conv-linear",
+    "thop_hook_parameter_count_not_used": 19061043,
+    "fixed_transforms_and_functional_operators_counted": false,
+    "scope_detail": "Executed nn.Conv2d and nn.Linear hooks only; excludes normalization, activations, pooling, fixed Haar/Sobel, local statistics, spatial rearrangement, interpolation, elementwise operations, attention matrix products, functional projections inside MultiheadAttention, and sampling operations.",
+    "components": {
+      "backbone": {
+        "MACs": 16939424000,
+        "GFLOPs": 33.878848
+      },
+      "decoder": {
+        "MACs": 3630259200,
+        "GFLOPs": 7.2605184
+      },
+      "encoder": {
+        "MACs": 8770969600,
+        "GFLOPs": 17.5419392
+      }
+    },
+    "runtime": {
+      "python": "3.11.14",
+      "torch": "2.1.2+cpu",
+      "thop": "0.1.1-2209072238"
+    },
+    "accuracy_or_latency_measured": false,
+    "forward_backward_smoke": "passed"
+  }
+}

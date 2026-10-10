@@ -1,0 +1,21 @@
+name: PFD tests
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  cpu-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: python -m pip install --index-url https://download.pytorch.org/whl/cpu torch==2.1.2 torchvision==0.16.2
+      - run: python -m pip install -r requirements.txt
+      - run: python -m pytest tests -q
+        env:
+          OMP_NUM_THREADS: '2'
+          MKL_NUM_THREADS: '2'

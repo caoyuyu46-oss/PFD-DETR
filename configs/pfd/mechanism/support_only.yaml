@@ -1,0 +1,5 @@
+_base_: ../base.yaml
+experiment: mechanism_support_only
+model:
+  rdpf:
+    mode: aux_only

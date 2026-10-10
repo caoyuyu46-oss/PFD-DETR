@@ -1,0 +1,81 @@
+{
+  "environment": {
+    "python": "3.11",
+    "torch": "2.1.2+cpu",
+    "torchvision": "0.16.2+cpu",
+    "device": "CPU"
+  },
+  "development_tests": {
+    "passed": 54,
+    "failed": 0,
+    "optional_sources_and_checkpoint_available": true
+  },
+  "experiment_configurations_constructed": 48,
+  "sample": {
+    "images": 200,
+    "boxes": 1127,
+    "splits": {
+      "train": 160,
+      "val": 20,
+      "test": 20
+    }
+  },
+  "real_training_smoke": {
+    "optimizer_updates": 1,
+    "validation_images": 20,
+    "architecture": "paper_v716"
+  },
+  "real_evaluation_smoke": {
+    "validation_images": 20,
+    "test_images": 20
+  },
+  "official_coco_checkpoint_tensors_verified": 455,
+  "onnx_runtime_comparison": {
+    "full_onnx_check": true,
+    "onnxruntime": "1.20.1",
+    "fixed_input_shape": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "batch_one": true,
+    "precision": "FP32",
+    "query_matching": "Hungarian assignment using L1 box distance",
+    "results": [
+      {
+        "input": "sample",
+        "aligned_box_max_abs_error": 2.980232238769531e-07,
+        "aligned_logit_max_abs_error": 6.109476089477539e-07,
+        "raw_box_max_abs_error": 0.8124570846557617,
+        "queries": 300
+      },
+      {
+        "input": "random",
+        "aligned_box_max_abs_error": 2.384185791015625e-07,
+        "aligned_logit_max_abs_error": 6.705522537231445e-07,
+        "raw_box_max_abs_error": 0.7124056816101074,
+        "queries": 300
+      }
+    ],
+    "source_checkpoint": "one_update_sample_smoke_not_paper_weights"
+  },
+  "full_data_training": "not_run",
+  "cuda_and_tensorrt": "not_run",
+  "paper_metrics_reproduced": false,
+  "external_detector_native_training_executed": false,
+  "clean_distribution_tests": {
+    "passed": 53,
+    "skipped": 1,
+    "failed": 0,
+    "skip_reason": "Optional official COCO checkpoint downloaded separately",
+    "external_control_sources_fetched_with_pinned_downloader": true
+  },
+  "clean_distribution_training_smoke": {
+    "optimizer_updates": 1,
+    "validation_images": 20
+  },
+  "clean_distribution_model_configurations": 48,
+  "english_source_scan": "passed",
+  "source_sanitization_ast_validation": "passed"
+}

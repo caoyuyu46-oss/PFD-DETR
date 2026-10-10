@@ -1,0 +1,23 @@
+{
+  "splits": {
+    "train": {
+      "images": 160,
+      "annotations": 861
+    },
+    "val": {
+      "images": 20,
+      "annotations": 104
+    },
+    "test": {
+      "images": 20,
+      "annotations": 162
+    }
+  },
+  "class_mapping": {
+    "0": 1
+  },
+  "validation": "All source image/label pairs validated; no source labels edited; exact cross-split image duplicates rejected.",
+  "group_scope": "Original split labels preserved. No acquisition/tree/group metadata is inferred by this converter.",
+  "file_name_scope": "COCO file_name is relative to images/<split>.",
+  "path_scope": "dataset.yaml path is resolved by the consuming runtime; use --dataset-path for the deployment location."
+}

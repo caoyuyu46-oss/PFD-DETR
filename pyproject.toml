@@ -1,0 +1,4 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "rtdetr_pytorch"]
+filterwarnings = ["ignore::DeprecationWarning"]

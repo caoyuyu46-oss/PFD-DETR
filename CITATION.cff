@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite this software and the RT-DETR paper when using this implementation."
+title: PFD-DETR
+type: software
+authors:
+  - name: PFD-DETR contributors
+version: 0.1.0
+license: AGPL-3.0
+repository-code: "https://github.com/caoyuyu46-oss/PFD-DETR"

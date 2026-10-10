@@ -1,0 +1,1440 @@
+{
+  "manuscript": "v7.16",
+  "executable_experiment_count": 48,
+  "base_and_sample_excluded": true,
+  "all_historical_results_reproduced": false,
+  "tables": [
+    {
+      "table": "1",
+      "ooxml_table_index": 0,
+      "headers": [
+        "Feature",
+        "Role / location",
+        "Channels",
+        "Spatial size"
+      ],
+      "rows": [
+        {
+          "row": 1,
+          "manuscript_label": "P2",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 2,
+          "manuscript_label": "P3 / ",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 3,
+          "manuscript_label": "P4",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 4,
+          "manuscript_label": "P5",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 5,
+          "manuscript_label": "Y5",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 6,
+          "manuscript_label": "Y4",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 7,
+          "manuscript_label": "T3 / O3",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 8,
+          "manuscript_label": "O4 / O5",
+          "scope": "architecture/data/training description; see base config and protocol"
+        }
+      ]
+    },
+    {
+      "table": "2",
+      "ooxml_table_index": 1,
+      "headers": [
+        "Dataset",
+        "Train images",
+        "Validation images",
+        "Test images",
+        "Partition protocol / annotation"
+      ],
+      "rows": [
+        {
+          "row": 1,
+          "manuscript_label": "KFPFD",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 2,
+          "manuscript_label": "MangoYOLO",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 3,
+          "manuscript_label": "MinneApple-local",
+          "scope": "architecture/data/training description; see base config and protocol"
+        }
+      ]
+    },
+    {
+      "table": "3a",
+      "ooxml_table_index": 2,
+      "headers": [
+        "Category",
+        "Item",
+        "Setting"
+      ],
+      "rows": [
+        {
+          "row": 1,
+          "manuscript_label": "Training",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 2,
+          "manuscript_label": "",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 3,
+          "manuscript_label": "",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 4,
+          "manuscript_label": "",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 5,
+          "manuscript_label": "Optimization",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 6,
+          "manuscript_label": "",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 7,
+          "manuscript_label": "",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 8,
+          "manuscript_label": "",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 9,
+          "manuscript_label": "",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 10,
+          "manuscript_label": "Precision",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 11,
+          "manuscript_label": "Augmentation",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 12,
+          "manuscript_label": "",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 13,
+          "manuscript_label": "",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 14,
+          "manuscript_label": "Model",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 15,
+          "manuscript_label": "",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 16,
+          "manuscript_label": "",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 17,
+          "manuscript_label": "",
+          "scope": "architecture/data/training description; see base config and protocol"
+        },
+        {
+          "row": 18,
+          "manuscript_label": "",
+          "scope": "architecture/data/training description; see base config and protocol"
+        }
+      ]
+    },
+    {
+      "table": "3b",
+      "ooxml_table_index": 3,
+      "headers": [
+        "Model",
+        "Initialization / implementation basis",
+        "Epochs",
+        "Optimizer",
+        "LR (backbone / main)",
+        "Weight decay",
+        "Training / inference scope"
+      ],
+      "rows": [
+        {
+          "row": 1,
+          "manuscript_label": "YOLO11s",
+          "protocol": "configs/external/protocols.yaml",
+          "status": "native external training with common COCO prediction evaluation; historical implementation not certified"
+        },
+        {
+          "row": 2,
+          "manuscript_label": "YOLO26s (one-to-one)",
+          "protocol": "configs/external/protocols.yaml",
+          "status": "native external training with common COCO prediction evaluation; historical implementation not certified"
+        },
+        {
+          "row": 3,
+          "manuscript_label": "RT-DETR-R18 official",
+          "protocol": "configs/external/protocols.yaml",
+          "status": "native external training with common COCO prediction evaluation; historical implementation not certified"
+        },
+        {
+          "row": 4,
+          "manuscript_label": "RT-DETRv2-R18",
+          "protocol": "configs/external/protocols.yaml",
+          "status": "native external training with common COCO prediction evaluation; historical implementation not certified"
+        },
+        {
+          "row": 5,
+          "manuscript_label": "D-FINE-S",
+          "protocol": "configs/external/protocols.yaml",
+          "status": "native external training with common COCO prediction evaluation; historical implementation not certified"
+        },
+        {
+          "row": 6,
+          "manuscript_label": "DEIM-D-FINE-S",
+          "protocol": "configs/external/protocols.yaml",
+          "status": "native external training with common COCO prediction evaluation; historical implementation not certified"
+        },
+        {
+          "row": 7,
+          "manuscript_label": "MRtic-Det reimpl.",
+          "protocol": "configs/external/protocols.yaml",
+          "status": "native external training with common COCO prediction evaluation; historical implementation not certified"
+        },
+        {
+          "row": 8,
+          "manuscript_label": "RT-DETR-R18 base",
+          "configs": [
+            "configs/pfd/system/kfpfd_baseline.yaml"
+          ]
+        },
+        {
+          "row": 9,
+          "manuscript_label": "PFD-DETR",
+          "configs": [
+            "configs/pfd/system/kfpfd_full.yaml"
+          ]
+        }
+      ]
+    },
+    {
+      "table": "4",
+      "ooxml_table_index": 4,
+      "headers": [
+        "Method",
+        "AP \u2191",
+        "AP50 \u2191",
+        "AP75 \u2191",
+        "APS,640 \u2191",
+        "Params (M) \u2193",
+        "GFLOPs (mixed scope) \u2193",
+        "Latency (ms) \u2193"
+      ],
+      "rows": [
+        {
+          "row": 1,
+          "manuscript_label": "YOLO11s (Jocher and Qiu, 2024)",
+          "protocol": "configs/external/protocols.yaml",
+          "status": "native external training with common COCO prediction evaluation; historical implementation not certified"
+        },
+        {
+          "row": 2,
+          "manuscript_label": "YOLO26s (one-to-one) (Jocher et al., 2026)",
+          "protocol": "configs/external/protocols.yaml",
+          "status": "native external training with common COCO prediction evaluation; historical implementation not certified"
+        },
+        {
+          "row": 3,
+          "manuscript_label": "RT-DETR-R18 (official) (Zhao et al., 2024)",
+          "protocol": "configs/external/protocols.yaml",
+          "status": "native external training with common COCO prediction evaluation; historical implementation not certified"
+        },
+        {
+          "row": 4,
+          "manuscript_label": "RT-DETRv2-R18 (Lv et al., 2024)",
+          "protocol": "configs/external/protocols.yaml",
+          "status": "native external training with common COCO prediction evaluation; historical implementation not certified"
+        },
+        {
+          "row": 5,
+          "manuscript_label": "D-FINE-S (Peng et al., 2025)",
+          "protocol": "configs/external/protocols.yaml",
+          "status": "native external training with common COCO prediction evaluation; historical implementation not certified"
+        },
+        {
+          "row": 6,
+          "manuscript_label": "DEIM-D-FINE-S (Huang et al., 2025)",
+          "protocol": "configs/external/protocols.yaml",
+          "status": "native external training with common COCO prediction evaluation; historical implementation not certified"
+        },
+        {
+          "row": 7,
+          "manuscript_label": "MRtic-Det reimpl. (Yan et al., 2025)",
+          "protocol": "configs/external/protocols.yaml",
+          "status": "native external training with common COCO prediction evaluation; historical implementation not certified"
+        },
+        {
+          "row": 8,
+          "manuscript_label": "RT-DETR-R18 base (our implementation) (Zhao et al., 2024)",
+          "configs": [
+            "configs/pfd/system/kfpfd_baseline.yaml"
+          ]
+        },
+        {
+          "row": 9,
+          "manuscript_label": "PFD-DETR",
+          "configs": [
+            "configs/pfd/system/kfpfd_full.yaml"
+          ]
+        }
+      ]
+    },
+    {
+      "table": "5a",
+      "ooxml_table_index": 5,
+      "headers": [
+        "Configuration",
+        "SSWR",
+        "RDPF residual",
+        "Center-support supervision",
+        "AP \u2191",
+        "AP75 \u2191",
+        "APS,640 \u2191"
+      ],
+      "rows": [
+        {
+          "row": 1,
+          "manuscript_label": "Controlled baseline",
+          "config": "configs/pfd/controlled/baseline.yaml"
+        },
+        {
+          "row": 2,
+          "manuscript_label": "SSWR",
+          "config": "configs/pfd/controlled/sswr.yaml"
+        },
+        {
+          "row": 3,
+          "manuscript_label": "Support supervision",
+          "config": "configs/pfd/controlled/support.yaml"
+        },
+        {
+          "row": 4,
+          "manuscript_label": "SSWR + support",
+          "config": "configs/pfd/controlled/sswr_support.yaml"
+        },
+        {
+          "row": 5,
+          "manuscript_label": "RDPF",
+          "config": "configs/pfd/controlled/rdpf.yaml"
+        },
+        {
+          "row": 6,
+          "manuscript_label": "PFD-DETR",
+          "config": "configs/pfd/controlled/full.yaml"
+        }
+      ]
+    },
+    {
+      "table": "5b",
+      "ooxml_table_index": 6,
+      "headers": [
+        "Effect",
+        "Seed-paired contrast",
+        "\u0394AP \u219195% CI",
+        "\u0394APS,640 \u219195% CI"
+      ],
+      "rows": [
+        {
+          "row": 1,
+          "manuscript_label": "SSWR without support",
+          "tool": "tools/factorial_effects.py"
+        },
+        {
+          "row": 2,
+          "manuscript_label": "SSWR with support",
+          "tool": "tools/factorial_effects.py"
+        },
+        {
+          "row": 3,
+          "manuscript_label": "SSWR with RDPF",
+          "tool": "tools/factorial_effects.py"
+        },
+        {
+          "row": 4,
+          "manuscript_label": "Support supervision without SSWR",
+          "tool": "tools/factorial_effects.py"
+        },
+        {
+          "row": 5,
+          "manuscript_label": "Support supervision with SSWR",
+          "tool": "tools/factorial_effects.py"
+        },
+        {
+          "row": 6,
+          "manuscript_label": "RDPF residual without SSWR",
+          "tool": "tools/factorial_effects.py"
+        },
+        {
+          "row": 7,
+          "manuscript_label": "RDPF residual with SSWR",
+          "tool": "tools/factorial_effects.py"
+        },
+        {
+          "row": 8,
+          "manuscript_label": "SSWR \u00d7 support interaction",
+          "tool": "tools/factorial_effects.py"
+        },
+        {
+          "row": 9,
+          "manuscript_label": "SSWR \u00d7 residual interaction",
+          "tool": "tools/factorial_effects.py"
+        },
+        {
+          "row": 10,
+          "manuscript_label": "Combined interaction",
+          "tool": "tools/factorial_effects.py"
+        },
+        {
+          "row": 11,
+          "manuscript_label": "Total model effect",
+          "tool": "tools/factorial_effects.py"
+        }
+      ]
+    },
+    {
+      "table": "6a",
+      "ooxml_table_index": 7,
+      "headers": [
+        "Control",
+        "P3 refinement design",
+        "AP \u2191",
+        "APS,640 \u2191",
+        "Refinement params"
+      ],
+      "rows": [
+        {
+          "row": 1,
+          "manuscript_label": "Near-capacity residual",
+          "config": "configs/pfd/mechanism/sswr_plain_residual.yaml"
+        },
+        {
+          "row": 2,
+          "manuscript_label": "No structural descriptors",
+          "config": "configs/pfd/mechanism/sswr_no_descriptors.yaml"
+        },
+        {
+          "row": 3,
+          "manuscript_label": "Uniform scale mixing",
+          "config": "configs/pfd/mechanism/sswr_uniform.yaml"
+        },
+        {
+          "row": 4,
+          "manuscript_label": "Single-window structure",
+          "config": "configs/pfd/mechanism/sswr_single.yaml"
+        },
+        {
+          "row": 5,
+          "manuscript_label": "WTConv control (Finder et al., 2024)",
+          "config": "configs/pfd/mechanism/wtconv.yaml"
+        },
+        {
+          "row": 6,
+          "manuscript_label": "Full SSWR",
+          "config": "configs/pfd/mechanism/default.yaml"
+        }
+      ]
+    },
+    {
+      "table": "6b",
+      "ooxml_table_index": 8,
+      "headers": [
+        "Control",
+        "Controlled configuration",
+        "Added params",
+        "AP \u2191",
+        "APS,640 \u2191",
+        "GFLOPs \u2193"
+      ],
+      "rows": [
+        {
+          "row": 1,
+          "manuscript_label": "Controlled baseline",
+          "config": "configs/pfd/mechanism/baseline.yaml"
+        },
+        {
+          "row": 2,
+          "manuscript_label": "P2 decoding",
+          "config": "configs/pfd/mechanism/p2_decoding.yaml"
+        },
+        {
+          "row": 3,
+          "manuscript_label": "Capacity-matched residual",
+          "config": "configs/pfd/mechanism/dual_capacity.yaml"
+        },
+        {
+          "row": 4,
+          "manuscript_label": "PFD-DETR",
+          "config": "configs/pfd/mechanism/default.yaml"
+        }
+      ]
+    },
+    {
+      "table": "7",
+      "ooxml_table_index": 9,
+      "headers": [
+        "Frozen intervention",
+        "AP \u2191",
+        "\u0394AP vs. intact"
+      ],
+      "rows": [
+        {
+          "row": 1,
+          "manuscript_label": "Intact PFD-DETR",
+          "tool": "tools/frozen_interventions.py",
+          "module": "sswr",
+          "intervention": "none"
+        },
+        {
+          "row": 2,
+          "manuscript_label": "Zero structural descriptors",
+          "tool": "tools/frozen_interventions.py",
+          "module": "sswr",
+          "intervention": "structure_zero"
+        },
+        {
+          "row": 3,
+          "manuscript_label": "Uniform scale weights",
+          "tool": "tools/frozen_interventions.py",
+          "module": "sswr",
+          "intervention": "scale_uniform"
+        },
+        {
+          "row": 4,
+          "manuscript_label": "Joint scale-vector shuffle",
+          "tool": "tools/frozen_interventions.py",
+          "module": "sswr",
+          "intervention": "scale_shuffle"
+        },
+        {
+          "row": 5,
+          "manuscript_label": "One-cell scale shift",
+          "tool": "tools/frozen_interventions.py",
+          "module": "sswr",
+          "intervention": "scale_shift"
+        },
+        {
+          "row": 6,
+          "manuscript_label": "Disable SSWR residual",
+          "tool": "tools/frozen_interventions.py",
+          "module": "sswr",
+          "intervention": "bypass"
+        }
+      ]
+    },
+    {
+      "table": "8a",
+      "ooxml_table_index": 10,
+      "headers": [
+        "Control",
+        "Residual-fusion condition",
+        "Support gain",
+        "AP \u2191",
+        "APS,640 \u2191"
+      ],
+      "rows": [
+        {
+          "row": 1,
+          "manuscript_label": "Ungated",
+          "config": "configs/pfd/mechanism/rdpf_ungated.yaml"
+        },
+        {
+          "row": 2,
+          "manuscript_label": "Deep support only",
+          "config": "configs/pfd/mechanism/rdpf_deep_only.yaml"
+        },
+        {
+          "row": 3,
+          "manuscript_label": "Ambiguity only",
+          "config": "configs/pfd/mechanism/rdpf_ambiguity.yaml"
+        },
+        {
+          "row": 4,
+          "manuscript_label": "Absolute discrepancy",
+          "config": "configs/pfd/mechanism/rdpf_absolute.yaml"
+        },
+        {
+          "row": 5,
+          "manuscript_label": "Support supervision only",
+          "config": "configs/pfd/mechanism/support_only.yaml"
+        },
+        {
+          "row": 6,
+          "manuscript_label": "No support loss",
+          "config": "configs/pfd/mechanism/no_support_loss_gate.yaml"
+        },
+        {
+          "row": 7,
+          "manuscript_label": "FreqFusion control (Chen et al., 2024)",
+          "config": "configs/pfd/mechanism/freqfusion.yaml"
+        },
+        {
+          "row": 8,
+          "manuscript_label": "Full RDPF",
+          "config": "configs/pfd/mechanism/default.yaml"
+        }
+      ]
+    },
+    {
+      "table": "8b",
+      "ooxml_table_index": 11,
+      "headers": [
+        "Control",
+        "Support-target / loss condition",
+        "AP \u2191",
+        "APS,640 \u2191"
+      ],
+      "rows": [
+        {
+          "row": 1,
+          "manuscript_label": "No support loss",
+          "config": "configs/pfd/mechanism/no_support_loss_target.yaml"
+        },
+        {
+          "row": 2,
+          "manuscript_label": "Box occupancy",
+          "config": "configs/pfd/mechanism/binary_box.yaml"
+        },
+        {
+          "row": 3,
+          "manuscript_label": "Center cell",
+          "config": "configs/pfd/mechanism/center_cell.yaml"
+        },
+        {
+          "row": 4,
+          "manuscript_label": "Untruncated Gaussian",
+          "config": "configs/pfd/mechanism/gaussian.yaml"
+        },
+        {
+          "row": 5,
+          "manuscript_label": "Mean soft BCE",
+          "config": "configs/pfd/mechanism/mean_bce.yaml"
+        },
+        {
+          "row": 6,
+          "manuscript_label": "Shallow head only",
+          "config": "configs/pfd/mechanism/shallow_only.yaml"
+        },
+        {
+          "row": 7,
+          "manuscript_label": "Deep head only",
+          "config": "configs/pfd/mechanism/deep_only.yaml"
+        },
+        {
+          "row": 8,
+          "manuscript_label": "Full support supervision",
+          "config": "configs/pfd/mechanism/default.yaml"
+        }
+      ]
+    },
+    {
+      "table": "9a",
+      "ooxml_table_index": 12,
+      "headers": [
+        "Frozen intervention",
+        "AP \u2191",
+        "\u0394AP vs. intact"
+      ],
+      "rows": [
+        {
+          "row": 1,
+          "manuscript_label": "Intact PFD-DETR",
+          "tool": "tools/frozen_interventions.py",
+          "module": "rdpf",
+          "intervention": "none"
+        },
+        {
+          "row": 2,
+          "manuscript_label": "Ambiguity-only gate",
+          "tool": "tools/frozen_interventions.py",
+          "module": "rdpf",
+          "intervention": "ambiguity_only"
+        },
+        {
+          "row": 3,
+          "manuscript_label": "Shallow-support shuffle",
+          "tool": "tools/frozen_interventions.py",
+          "module": "rdpf",
+          "intervention": "shallow_support_shuffle"
+        },
+        {
+          "row": 4,
+          "manuscript_label": "Deep-support shuffle",
+          "tool": "tools/frozen_interventions.py",
+          "module": "rdpf",
+          "intervention": "deep_support_shuffle"
+        },
+        {
+          "row": 5,
+          "manuscript_label": "Independent support shuffle",
+          "tool": "tools/frozen_interventions.py",
+          "module": "rdpf",
+          "intervention": "independent_both_shuffle"
+        },
+        {
+          "row": 6,
+          "manuscript_label": "Spatial-mean gate",
+          "tool": "tools/frozen_interventions.py",
+          "module": "rdpf",
+          "intervention": "gate_mean"
+        },
+        {
+          "row": 7,
+          "manuscript_label": "Gate forced to one",
+          "tool": "tools/frozen_interventions.py",
+          "module": "rdpf",
+          "intervention": "gate_one"
+        },
+        {
+          "row": 8,
+          "manuscript_label": "Disable RDPF residual",
+          "tool": "tools/frozen_interventions.py",
+          "module": "rdpf",
+          "intervention": "bypass"
+        }
+      ]
+    },
+    {
+      "table": "9b",
+      "ooxml_table_index": 13,
+      "headers": [
+        "Hyperparameter",
+        "Tested setting",
+        "Default",
+        "AP \u2191",
+        "APS,640 \u2191"
+      ],
+      "rows": [
+        {
+          "row": 1,
+          "manuscript_label": "SSWR window set",
+          "config": "configs/pfd/sensitivity/windows_3_5_7.yaml"
+        },
+        {
+          "row": 2,
+          "manuscript_label": "SSWR window set",
+          "config": "configs/pfd/sensitivity/default.yaml"
+        },
+        {
+          "row": 3,
+          "manuscript_label": "SSWR window set",
+          "config": "configs/pfd/sensitivity/windows_3_7_11.yaml"
+        },
+        {
+          "row": 4,
+          "manuscript_label": "RDPF gate floor \u03b4r",
+          "config": "configs/pfd/sensitivity/floor_005.yaml"
+        },
+        {
+          "row": 5,
+          "manuscript_label": "RDPF gate floor \u03b4r",
+          "config": "configs/pfd/sensitivity/default.yaml"
+        },
+        {
+          "row": 6,
+          "manuscript_label": "RDPF gate floor \u03b4r",
+          "config": "configs/pfd/sensitivity/floor_020.yaml"
+        },
+        {
+          "row": 7,
+          "manuscript_label": "Support-loss gain \u03bbsup",
+          "config": "configs/pfd/sensitivity/support_010.yaml"
+        },
+        {
+          "row": 8,
+          "manuscript_label": "Support-loss gain \u03bbsup",
+          "config": "configs/pfd/sensitivity/default.yaml"
+        },
+        {
+          "row": 9,
+          "manuscript_label": "Support-loss gain \u03bbsup",
+          "config": "configs/pfd/sensitivity/support_050.yaml"
+        }
+      ]
+    },
+    {
+      "table": "10a",
+      "ooxml_table_index": 14,
+      "headers": [
+        "Attribute",
+        "GT objects",
+        "Groups",
+        "Controlled baseline (%)",
+        "SSWR (%)",
+        "RDPF (%)",
+        "PFD-DETR (%)"
+      ],
+      "rows": [
+        {
+          "row": 1,
+          "manuscript_label": "Small visible extent",
+          "configs": [
+            "configs/pfd/controlled/baseline.yaml",
+            "configs/pfd/controlled/sswr.yaml",
+            "configs/pfd/controlled/rdpf.yaml",
+            "configs/pfd/controlled/full.yaml"
+          ],
+          "tool": "pfd_runtime.metrics.operating_metrics",
+          "requires": "authentic difficulty and group annotations; fixed global IoU-0.5 matches"
+        },
+        {
+          "row": 2,
+          "manuscript_label": "Severe occlusion",
+          "configs": [
+            "configs/pfd/controlled/baseline.yaml",
+            "configs/pfd/controlled/sswr.yaml",
+            "configs/pfd/controlled/rdpf.yaml",
+            "configs/pfd/controlled/full.yaml"
+          ],
+          "tool": "pfd_runtime.metrics.operating_metrics",
+          "requires": "authentic difficulty and group annotations; fixed global IoU-0.5 matches"
+        }
+      ]
+    },
+    {
+      "table": "10b",
+      "ooxml_table_index": 15,
+      "headers": [
+        "Configuration",
+        "Precision (%) \u2191",
+        "Recall (%) \u2191",
+        "FP/image \u2193",
+        "Leaf FP/image \u2193"
+      ],
+      "rows": [
+        {
+          "row": 1,
+          "manuscript_label": "Controlled baseline",
+          "config": "configs/pfd/controlled/baseline.yaml"
+        },
+        {
+          "row": 2,
+          "manuscript_label": "SSWR",
+          "config": "configs/pfd/controlled/sswr.yaml"
+        },
+        {
+          "row": 3,
+          "manuscript_label": "RDPF",
+          "config": "configs/pfd/controlled/rdpf.yaml"
+        },
+        {
+          "row": 4,
+          "manuscript_label": "PFD-DETR",
+          "config": "configs/pfd/controlled/full.yaml"
+        }
+      ]
+    },
+    {
+      "table": "11a",
+      "ooxml_table_index": 16,
+      "headers": [
+        "Method",
+        "MangoYOLOTest AP \u2191",
+        "MangoYOLOTest APS,640 \u2191",
+        "MinneApple-localDev. AP \u2191",
+        "MinneApple-localDev. APS,640 \u2191"
+      ],
+      "rows": [
+        {
+          "row": 1,
+          "manuscript_label": "YOLO11s (Jocher and Qiu, 2024)",
+          "protocol": "configs/external/protocols.yaml",
+          "status": "native external training with common COCO prediction evaluation; historical implementation not certified"
+        },
+        {
+          "row": 2,
+          "manuscript_label": "YOLO26s (one-to-one) (Jocher et al., 2026)",
+          "protocol": "configs/external/protocols.yaml",
+          "status": "native external training with common COCO prediction evaluation; historical implementation not certified"
+        },
+        {
+          "row": 3,
+          "manuscript_label": "RT-DETRv2-R18 (Lv et al., 2024)",
+          "protocol": "configs/external/protocols.yaml",
+          "status": "native external training with common COCO prediction evaluation; historical implementation not certified"
+        },
+        {
+          "row": 4,
+          "manuscript_label": "D-FINE-S (Peng et al., 2025)",
+          "protocol": "configs/external/protocols.yaml",
+          "status": "native external training with common COCO prediction evaluation; historical implementation not certified"
+        },
+        {
+          "row": 5,
+          "manuscript_label": "DEIM-D-FINE-S (Huang et al., 2025)",
+          "protocol": "configs/external/protocols.yaml",
+          "status": "native external training with common COCO prediction evaluation; historical implementation not certified"
+        },
+        {
+          "row": 6,
+          "manuscript_label": "MRtic-Det reimpl. (Yan et al., 2025)",
+          "protocol": "configs/external/protocols.yaml",
+          "status": "native external training with common COCO prediction evaluation; historical implementation not certified"
+        },
+        {
+          "row": 7,
+          "manuscript_label": "RT-DETR-R18 base (Zhao et al., 2024)",
+          "configs": [
+            "configs/pfd/system/mango_baseline.yaml",
+            "configs/pfd/system/minneapple_local_baseline.yaml"
+          ]
+        },
+        {
+          "row": 8,
+          "manuscript_label": "PFD-DETR",
+          "configs": [
+            "configs/pfd/system/mango_full.yaml",
+            "configs/pfd/system/minneapple_local_full.yaml"
+          ]
+        }
+      ]
+    },
+    {
+      "table": "11b",
+      "ooxml_table_index": 17,
+      "headers": [
+        "Configuration",
+        "MangoYOLOTest AP \u2191",
+        "MangoYOLOTest APS,640 \u2191",
+        "MinneApple-localDev. AP \u2191",
+        "MinneApple-localDev. APS,640 \u2191"
+      ],
+      "rows": [
+        {
+          "row": 1,
+          "manuscript_label": "RT-DETR-R18 base",
+          "configs": [
+            "configs/pfd/system/mango_baseline.yaml",
+            "configs/pfd/system/minneapple_local_baseline.yaml"
+          ]
+        },
+        {
+          "row": 2,
+          "manuscript_label": "RT-DETR-R18 base + SSWR",
+          "configs": [
+            "configs/pfd/system/mango_sswr.yaml",
+            "configs/pfd/system/minneapple_local_sswr.yaml"
+          ]
+        },
+        {
+          "row": 3,
+          "manuscript_label": "RT-DETR-R18 base + RDPF",
+          "configs": [
+            "configs/pfd/system/mango_rdpf.yaml",
+            "configs/pfd/system/minneapple_local_rdpf.yaml"
+          ]
+        },
+        {
+          "row": 4,
+          "manuscript_label": "PFD-DETR",
+          "configs": [
+            "configs/pfd/system/mango_full.yaml",
+            "configs/pfd/system/minneapple_local_full.yaml"
+          ]
+        }
+      ]
+    },
+    {
+      "table": "12a",
+      "ooxml_table_index": 18,
+      "headers": [
+        "Configuration / scope",
+        "Mean (ms) \u2193",
+        "p50 (ms) \u2193",
+        "p95 (ms) \u2193",
+        "FPS \u2191",
+        "Peak alloc. (MB) \u2193"
+      ],
+      "rows": [
+        {
+          "row": 1,
+          "manuscript_label": "Controlled baseline / forward",
+          "config": "configs/pfd/controlled/baseline.yaml",
+          "tool": "tools/benchmark.py",
+          "scope": "forward"
+        },
+        {
+          "row": 2,
+          "manuscript_label": "SSWR / forward",
+          "config": "configs/pfd/controlled/sswr.yaml",
+          "tool": "tools/benchmark.py",
+          "scope": "forward"
+        },
+        {
+          "row": 3,
+          "manuscript_label": "RDPF / forward",
+          "config": "configs/pfd/controlled/rdpf.yaml",
+          "tool": "tools/benchmark.py",
+          "scope": "forward"
+        },
+        {
+          "row": 4,
+          "manuscript_label": "PFD-DETR / forward",
+          "config": "configs/pfd/controlled/full.yaml",
+          "tool": "tools/benchmark.py",
+          "scope": "forward"
+        },
+        {
+          "row": 5,
+          "manuscript_label": "Controlled baseline / CPU image to boxes",
+          "config": "configs/pfd/controlled/baseline.yaml",
+          "tool": "tools/benchmark.py",
+          "scope": "image-to-boxes"
+        },
+        {
+          "row": 6,
+          "manuscript_label": "PFD-DETR / CPU image to boxes",
+          "config": "configs/pfd/controlled/full.yaml",
+          "tool": "tools/benchmark.py",
+          "scope": "image-to-boxes"
+        }
+      ]
+    },
+    {
+      "table": "12b",
+      "ooxml_table_index": 19,
+      "headers": [
+        "Configuration",
+        "MAE \u2193",
+        "RMSE \u2193",
+        "Bias \u2192 0",
+        "FP/image \u2193",
+        "FN/image \u2193"
+      ],
+      "rows": [
+        {
+          "row": 1,
+          "manuscript_label": "Controlled baseline",
+          "config": "configs/pfd/controlled/baseline.yaml"
+        },
+        {
+          "row": 2,
+          "manuscript_label": "SSWR",
+          "config": "configs/pfd/controlled/sswr.yaml"
+        },
+        {
+          "row": 3,
+          "manuscript_label": "RDPF",
+          "config": "configs/pfd/controlled/rdpf.yaml"
+        },
+        {
+          "row": 4,
+          "manuscript_label": "PFD-DETR",
+          "config": "configs/pfd/controlled/full.yaml"
+        }
+      ]
+    },
+    {
+      "table": "13",
+      "ooxml_table_index": 20,
+      "headers": [
+        "Model / engine",
+        "Pure inf. (ms) \u2193",
+        "Pure FPS \u2191",
+        "End-to-end (ms) \u2193",
+        "End-to-end FPS \u2191",
+        "Power mode"
+      ],
+      "rows": [
+        {
+          "row": 1,
+          "manuscript_label": "RT-DETR-R18 base / FP16 (Zhao et al., 2024)",
+          "tool": "tools/export_onnx.py",
+          "status": "architecture export support; historical Jetson timing requires hardware/engine records"
+        },
+        {
+          "row": 2,
+          "manuscript_label": "PFD-DETR / FP16",
+          "tool": "tools/export_onnx.py",
+          "status": "architecture export support; historical Jetson timing requires hardware/engine records"
+        }
+      ]
+    },
+    {
+      "table": "A.1",
+      "ooxml_table_index": 21,
+      "headers": [
+        "Configuration",
+        "Metric",
+        "Seed 0",
+        "Seed 1",
+        "Seed 2",
+        "Seed 3",
+        "Seed 4",
+        "Mean \u00b1 SD"
+      ],
+      "rows": [
+        {
+          "row": 1,
+          "manuscript_label": "Controlled baseline",
+          "config": "configs/pfd/controlled/baseline.yaml"
+        },
+        {
+          "row": 2,
+          "manuscript_label": "Controlled baseline",
+          "config": "configs/pfd/controlled/baseline.yaml"
+        },
+        {
+          "row": 3,
+          "manuscript_label": "SSWR",
+          "config": "configs/pfd/controlled/sswr.yaml"
+        },
+        {
+          "row": 4,
+          "manuscript_label": "SSWR",
+          "config": "configs/pfd/controlled/sswr.yaml"
+        },
+        {
+          "row": 5,
+          "manuscript_label": "Support supervision",
+          "config": "configs/pfd/controlled/support.yaml"
+        },
+        {
+          "row": 6,
+          "manuscript_label": "Support supervision",
+          "config": "configs/pfd/controlled/support.yaml"
+        },
+        {
+          "row": 7,
+          "manuscript_label": "SSWR + support",
+          "config": "configs/pfd/controlled/sswr_support.yaml"
+        },
+        {
+          "row": 8,
+          "manuscript_label": "SSWR + support",
+          "config": "configs/pfd/controlled/sswr_support.yaml"
+        },
+        {
+          "row": 9,
+          "manuscript_label": "RDPF",
+          "config": "configs/pfd/controlled/rdpf.yaml"
+        },
+        {
+          "row": 10,
+          "manuscript_label": "RDPF",
+          "config": "configs/pfd/controlled/rdpf.yaml"
+        },
+        {
+          "row": 11,
+          "manuscript_label": "PFD-DETR",
+          "config": "configs/pfd/controlled/full.yaml"
+        },
+        {
+          "row": 12,
+          "manuscript_label": "PFD-DETR",
+          "config": "configs/pfd/controlled/full.yaml"
+        }
+      ]
+    },
+    {
+      "table": "A.2",
+      "ooxml_table_index": 22,
+      "headers": [
+        "Path / intervention",
+        "Seed 0",
+        "Seed 1",
+        "Seed 2",
+        "Seed 3",
+        "Seed 4",
+        "\u0394AP mean \u00b1 SD"
+      ],
+      "rows": [
+        {
+          "row": 1,
+          "manuscript_label": "SSWR: zero descriptors",
+          "tool": "tools/frozen_interventions.py",
+          "requires": "original independent frozen reference cohort checkpoint manifest"
+        },
+        {
+          "row": 2,
+          "manuscript_label": "SSWR: uniform weights",
+          "tool": "tools/frozen_interventions.py",
+          "requires": "original independent frozen reference cohort checkpoint manifest"
+        },
+        {
+          "row": 3,
+          "manuscript_label": "SSWR: scale-vector shuffle",
+          "tool": "tools/frozen_interventions.py",
+          "requires": "original independent frozen reference cohort checkpoint manifest"
+        },
+        {
+          "row": 4,
+          "manuscript_label": "SSWR: one-cell shift",
+          "tool": "tools/frozen_interventions.py",
+          "requires": "original independent frozen reference cohort checkpoint manifest"
+        },
+        {
+          "row": 5,
+          "manuscript_label": "SSWR: residual off",
+          "tool": "tools/frozen_interventions.py",
+          "requires": "original independent frozen reference cohort checkpoint manifest"
+        },
+        {
+          "row": 6,
+          "manuscript_label": "RDPF: ambiguity only",
+          "tool": "tools/frozen_interventions.py",
+          "requires": "original independent frozen reference cohort checkpoint manifest"
+        },
+        {
+          "row": 7,
+          "manuscript_label": "RDPF: shallow shuffle",
+          "tool": "tools/frozen_interventions.py",
+          "requires": "original independent frozen reference cohort checkpoint manifest"
+        },
+        {
+          "row": 8,
+          "manuscript_label": "RDPF: deep shuffle",
+          "tool": "tools/frozen_interventions.py",
+          "requires": "original independent frozen reference cohort checkpoint manifest"
+        },
+        {
+          "row": 9,
+          "manuscript_label": "RDPF: independent shuffle",
+          "tool": "tools/frozen_interventions.py",
+          "requires": "original independent frozen reference cohort checkpoint manifest"
+        },
+        {
+          "row": 10,
+          "manuscript_label": "RDPF: mean gate",
+          "tool": "tools/frozen_interventions.py",
+          "requires": "original independent frozen reference cohort checkpoint manifest"
+        },
+        {
+          "row": 11,
+          "manuscript_label": "RDPF: gate = 1",
+          "tool": "tools/frozen_interventions.py",
+          "requires": "original independent frozen reference cohort checkpoint manifest"
+        },
+        {
+          "row": 12,
+          "manuscript_label": "RDPF: residual off",
+          "tool": "tools/frozen_interventions.py",
+          "requires": "original independent frozen reference cohort checkpoint manifest"
+        }
+      ]
+    },
+    {
+      "table": "A.3",
+      "ooxml_table_index": 23,
+      "headers": [
+        "Configuration",
+        "Seed",
+        "TP",
+        "FP",
+        "FN (derived)",
+        "Leaf FP"
+      ],
+      "rows": [
+        {
+          "row": 1,
+          "manuscript_label": "Controlled baseline",
+          "config": "configs/pfd/controlled/baseline.yaml",
+          "tool": "tools/evaluate_predictions.py",
+          "requires": "validation-selected operating threshold and human leaf-review records"
+        },
+        {
+          "row": 2,
+          "manuscript_label": "Controlled baseline",
+          "config": "configs/pfd/controlled/baseline.yaml",
+          "tool": "tools/evaluate_predictions.py",
+          "requires": "validation-selected operating threshold and human leaf-review records"
+        },
+        {
+          "row": 3,
+          "manuscript_label": "Controlled baseline",
+          "config": "configs/pfd/controlled/baseline.yaml",
+          "tool": "tools/evaluate_predictions.py",
+          "requires": "validation-selected operating threshold and human leaf-review records"
+        },
+        {
+          "row": 4,
+          "manuscript_label": "Controlled baseline",
+          "config": "configs/pfd/controlled/baseline.yaml",
+          "tool": "tools/evaluate_predictions.py",
+          "requires": "validation-selected operating threshold and human leaf-review records"
+        },
+        {
+          "row": 5,
+          "manuscript_label": "Controlled baseline",
+          "config": "configs/pfd/controlled/baseline.yaml",
+          "tool": "tools/evaluate_predictions.py",
+          "requires": "validation-selected operating threshold and human leaf-review records"
+        },
+        {
+          "row": 6,
+          "manuscript_label": "SSWR",
+          "config": "configs/pfd/controlled/sswr.yaml",
+          "tool": "tools/evaluate_predictions.py",
+          "requires": "validation-selected operating threshold and human leaf-review records"
+        },
+        {
+          "row": 7,
+          "manuscript_label": "SSWR",
+          "config": "configs/pfd/controlled/sswr.yaml",
+          "tool": "tools/evaluate_predictions.py",
+          "requires": "validation-selected operating threshold and human leaf-review records"
+        },
+        {
+          "row": 8,
+          "manuscript_label": "SSWR",
+          "config": "configs/pfd/controlled/sswr.yaml",
+          "tool": "tools/evaluate_predictions.py",
+          "requires": "validation-selected operating threshold and human leaf-review records"
+        },
+        {
+          "row": 9,
+          "manuscript_label": "SSWR",
+          "config": "configs/pfd/controlled/sswr.yaml",
+          "tool": "tools/evaluate_predictions.py",
+          "requires": "validation-selected operating threshold and human leaf-review records"
+        },
+        {
+          "row": 10,
+          "manuscript_label": "SSWR",
+          "config": "configs/pfd/controlled/sswr.yaml",
+          "tool": "tools/evaluate_predictions.py",
+          "requires": "validation-selected operating threshold and human leaf-review records"
+        },
+        {
+          "row": 11,
+          "manuscript_label": "RDPF",
+          "config": "configs/pfd/controlled/rdpf.yaml",
+          "tool": "tools/evaluate_predictions.py",
+          "requires": "validation-selected operating threshold and human leaf-review records"
+        },
+        {
+          "row": 12,
+          "manuscript_label": "RDPF",
+          "config": "configs/pfd/controlled/rdpf.yaml",
+          "tool": "tools/evaluate_predictions.py",
+          "requires": "validation-selected operating threshold and human leaf-review records"
+        },
+        {
+          "row": 13,
+          "manuscript_label": "RDPF",
+          "config": "configs/pfd/controlled/rdpf.yaml",
+          "tool": "tools/evaluate_predictions.py",
+          "requires": "validation-selected operating threshold and human leaf-review records"
+        },
+        {
+          "row": 14,
+          "manuscript_label": "RDPF",
+          "config": "configs/pfd/controlled/rdpf.yaml",
+          "tool": "tools/evaluate_predictions.py",
+          "requires": "validation-selected operating threshold and human leaf-review records"
+        },
+        {
+          "row": 15,
+          "manuscript_label": "RDPF",
+          "config": "configs/pfd/controlled/rdpf.yaml",
+          "tool": "tools/evaluate_predictions.py",
+          "requires": "validation-selected operating threshold and human leaf-review records"
+        },
+        {
+          "row": 16,
+          "manuscript_label": "PFD-DETR",
+          "config": "configs/pfd/controlled/full.yaml",
+          "tool": "tools/evaluate_predictions.py",
+          "requires": "validation-selected operating threshold and human leaf-review records"
+        },
+        {
+          "row": 17,
+          "manuscript_label": "PFD-DETR",
+          "config": "configs/pfd/controlled/full.yaml",
+          "tool": "tools/evaluate_predictions.py",
+          "requires": "validation-selected operating threshold and human leaf-review records"
+        },
+        {
+          "row": 18,
+          "manuscript_label": "PFD-DETR",
+          "config": "configs/pfd/controlled/full.yaml",
+          "tool": "tools/evaluate_predictions.py",
+          "requires": "validation-selected operating threshold and human leaf-review records"
+        },
+        {
+          "row": 19,
+          "manuscript_label": "PFD-DETR",
+          "config": "configs/pfd/controlled/full.yaml",
+          "tool": "tools/evaluate_predictions.py",
+          "requires": "validation-selected operating threshold and human leaf-review records"
+        },
+        {
+          "row": 20,
+          "manuscript_label": "PFD-DETR",
+          "config": "configs/pfd/controlled/full.yaml",
+          "tool": "tools/evaluate_predictions.py",
+          "requires": "validation-selected operating threshold and human leaf-review records"
+        }
+      ]
+    }
+  ],
+  "new_implementations": [
+    "WTConv",
+    "FreqFusion",
+    "P2 decoder",
+    "dual plain residuals"
+  ],
+  "mapping_repairs": [
+    "P2 shared projection indices shifted by feature level",
+    "KFPFD system SSWR/RDPF marked supplementary rather than Table 4",
+    "mechanism rows assigned to exact table panel rather than all Tables 6 and 8",
+    "mechanism baseline receives separate experiment identifier"
+  ],
+  "limitations": [
+    "Historical full-data checkpoints and independent cohort manifests are not supplied. Same config and seeds may reproduce identical deterministic runs; no artificial seed offsets are created.",
+    "The sensitivity default is one shared configuration, with historical default-selection chronology not reconstructed.",
+    "The sample contains no fabricated occlusion or leaf attributes and does not represent the manuscript full dataset.",
+    "External native train pipelines are not implemented by the PFD trainer. MRtic historical reimplementation source remains unavailable.",
+    "P2/capacity/FreqFusion adapter choices are release definitions, not certified historical architecture recovery.",
+    "Frozen interventions require distinct original reference checkpoints to reproduce the manuscript independent frozen cohort.",
+    "Static profile excludes functional operations; hardware latency and AP require actual runs."
+  ]
+}

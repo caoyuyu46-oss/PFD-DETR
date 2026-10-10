@@ -1,0 +1,9 @@
+{
+  "nc": 1,
+  "names": [
+    "Pear fruitlet"
+  ],
+  "train": "images/train",
+  "val": "images/val",
+  "test": "images/test"
+}

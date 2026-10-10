@@ -1,0 +1,10 @@
+_base_: ../base.yaml
+experiment: mechanism_freqfusion
+model:
+  rdpf:
+    mode: freqfusion
+    compressed_channels: 64
+    lowpass_kernel: 5
+    highpass_kernel: 3
+    feature_resample: true
+    support_gain: 0.0

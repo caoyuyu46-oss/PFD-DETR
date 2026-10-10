@@ -1,0 +1,8 @@
+_base_: ../base.yaml
+experiment: sensitivity_windows_3_5_7
+model:
+  sswr:
+    windows:
+    - 3
+    - 5
+    - 7

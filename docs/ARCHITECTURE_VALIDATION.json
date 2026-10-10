@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "purpose": "Architecture and implementation checks, not verification of historical trained checkpoints or reported accuracy.",
+  "reference": "Author-supplied r4_code_reference A00/A10/A01/A11 graphs with Ultralytics 8.0.201",
+  "reference_wheel_sha256": "58e5771e84cf240b8b60407ae128b8d839400d1ac7697532f2717cd27baf152a",
+  "original_repc3_error": "Given groups=1, weight of size [128, 128, 3, 3], expected input[1, 256, 4, 4] to have 128 channels, but got 256 channels instead",
+  "repc3_correction": "At expansion=0.5, both 1x1 branch projections must output 128 hidden channels, matching the 128-channel RepConv stack; the final projection restores 256 output channels.",
+  "each_repc3_excess_parameters_before_correction": 131584,
+  "repc3_count": 4,
+  "reference_counts": {
+    "A00_baseline": {
+      "original_non_runnable": 20609108,
+      "corrected": 20082772,
+      "configuration_sha256": "e5a74237009de47fb20cf8dc6ca89c9025f15b3517551c05f14589dbe7c27ff6"
+    },
+    "A10_sswr": {
+      "original_non_runnable": 20620817,
+      "corrected": 20094481,
+      "configuration_sha256": "9d75dc066ddc17d9c2f5b2fd8d1eb203cd57ff99ac6b9cab63b5da3ffd4c9d1d"
+    },
+    "A01_rdpf": {
+      "original_non_runnable": 20659606,
+      "corrected": 20133270,
+      "configuration_sha256": "ac804be43de315aa259588b0f4cd15558cd7fd62a3df419627cdf3d146a98555"
+    },
+    "A11_full": {
+      "original_non_runnable": 20671315,
+      "corrected": 20144979,
+      "configuration_sha256": "a1c05fd6e6abad921ff49e65dc658878e05670625ec54c27fdb1ed2ee1214779"
+    }
+  },
+  "legacy_official_baseline_parameters": 20083028,
+  "legacy_minus_paper_parameters": 256,
+  "legacy_difference": "The official decoder stores an extra 256-element padding embedding row; the paper decoder stores only num_classes rows and pads denoising tensors with zeros.",
+  "paper_settings": {
+    "batchnorm_eps": 0.001,
+    "batchnorm_momentum": 0.03,
+    "class_head_initial_bias": "log(0.01/0.99) * num_classes / 80",
+    "varifocal_alpha": 0.75,
+    "varifocal_gamma": 2.0,
+    "varifocal_modulator_gradient": true,
+    "empty_target_focal_alpha": 0.25,
+    "empty_target_focal_gamma": 1.5
+  },
+  "graph_comparison": {
+    "reference": "r4_code_reference A00 + ultralytics 8.0.201 with RepC3 projections corrected to hidden channels",
+    "runtime": {
+      "torch": "2.9.1+cu130"
+    },
+    "input": [
+      2,
+      3,
+      320,
+      320
+    ],
+    "reference_parameters": 20082772,
+    "port_parameters": 20082772,
+    "maximum_absolute_differences": {
+      "backbone": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "encoder": [
+        2.0954757928848267e-09,
+        9.89530235528946e-10,
+        5.21540641784668e-08
+      ],
+      "boxes": 0.675000011920929,
+      "logits": 0.007640719413757324,
+      "reordered_queries": 2,
+      "aligned_boxes": 0.0,
+      "aligned_logits": 4.76837158203125e-07
+    },
+    "denoising_maximum_absolute_differences": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "claim": "Numerical agreement at stated tolerance for the audited random-weight graph and batch, not a training-result reproduction."
+  },
+  "graph_comparison_note": "Different attention kernels cause small floating-point changes. Two near-tied queries exchange order in the audited batch; aligned prediction sets agree to the recorded tolerance. Ordered tensor identity is not claimed.",
+  "paper_runtime_checks": {
+    "torch": "2.1.2+cpu",
+    "test_file": "tests/test_paper_architecture.py",
+    "tests_passed": 6,
+    "six_arms_forward_backward": true,
+    "empty_and_unequal_target_batches": true,
+    "paired_shared_state_bitwise_equal": true,
+    "zero_residual_outputs_bitwise_equal": true,
+    "legacy_checkpoint_strict_state_loading": true,
+    "AdamW_decay_excludes_bias_and_normalization_parameters": true,
+    "frozen_parameters_excluded_from_paper_optimizer": true
+  },
+  "COCO_checkpoint": {
+    "file": "rtdetr_r18vd_6x_coco.pth",
+    "sha256": "3ba8b5c909c9a1c4f21e96d0a7251ab1a485093955ca327d0061fef8d33c66f0",
+    "loaded_tensors_verified": 455,
+    "paired_state_sha256": "47bd81f6abce96f9c19272c449f0e052db022d9d3689a46f37aa8778c57967c9",
+    "paired_shared_tensors_bitwise_equal": true,
+    "zero_residual_outputs_bitwise_equal": true,
+    "reinitialized_class_dependent_tensors": {
+      "decoder.denoising_class_embed.weight": {
+        "source_shape": [
+          81,
+          256
+        ],
+        "target_shape": [
+          1,
+          256
+        ]
+      },
+      "decoder.enc_score_head.weight": {
+        "source_shape": [
+          80,
+          256
+        ],
+        "target_shape": [
+          1,
+          256
+        ]
+      },
+      "decoder.enc_score_head.bias": {
+        "source_shape": [
+          80
+        ],
+        "target_shape": [
+          1
+        ]
+      },
+      "decoder.dec_score_head.0.weight": {
+        "source_shape": [
+          80,
+          256
+        ],
+        "target_shape": [
+          1,
+          256
+        ]
+      },
+      "decoder.dec_score_head.0.bias": {
+        "source_shape": [
+          80
+        ],
+        "target_shape": [
+          1
+        ]
+      },
+      "decoder.dec_score_head.1.weight": {
+        "source_shape": [
+          80,
+          256
+        ],
+        "target_shape": [
+          1,
+          256
+        ]
+      },
+      "decoder.dec_score_head.1.bias": {
+        "source_shape": [
+          80
+        ],
+        "target_shape": [
+          1
+        ]
+      },
+      "decoder.dec_score_head.2.weight": {
+        "source_shape": [
+          80,
+          256
+        ],
+        "target_shape": [
+          1,
+          256
+        ]
+      },
+      "decoder.dec_score_head.2.bias": {
+        "source_shape": [
+          80
+        ],
+        "target_shape": [
+          1
+        ]
+      }
+    }
+  }
+}

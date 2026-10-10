@@ -1,0 +1,2 @@
+-r requirements.txt
+PyWavelets==1.6.0

@@ -1,0 +1,53 @@
+experiment: pfd_detr_r18
+data: configs/data/kfpfd.yaml
+initialization:
+  type: random
+seeds:
+- 0
+- 1
+- 2
+- 3
+- 4
+model:
+  architecture: paper_v716
+  variant: full
+  image_size: 640
+  num_classes: 1
+  num_queries: 300
+  decoder_layers: 3
+  sswr:
+    hidden: 32
+    windows:
+    - 3
+    - 5
+    - 9
+    gate_floor: 0.1
+    mode: full
+  rdpf:
+    hidden: 64
+    floor: 0.1
+    mode: full
+    target: truncated_gaussian
+    loss: balanced
+    support_gain: 0.25
+training:
+  warmup_epochs: 0
+  epochs: 300
+  batch_size: 8
+  nominal_batch_size: 64
+  eval_batch_size: 1
+  lr: 0.0001
+  weight_decay: 0.0001
+  betas:
+  - 0.937
+  - 0.999
+  final_lr_ratio: 0.01
+  clip_norm: 10.0
+  ema_decay: 0.9999
+augmentation:
+  hsv_h: 0.015
+  hsv_s: 0.4
+  hsv_v: 0.3
+  translate: 0.1
+  scale: 0.5
+  fliplr: 0.5

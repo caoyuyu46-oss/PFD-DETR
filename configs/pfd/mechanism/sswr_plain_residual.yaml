@@ -1,0 +1,6 @@
+_base_: ../base.yaml
+experiment: mechanism_sswr_plain_residual
+model:
+  sswr:
+    mode: plain_residual
+    hidden: 41

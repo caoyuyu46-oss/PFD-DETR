@@ -1,0 +1,4 @@
+_base_: ../base.yaml
+experiment: mechanism_p2_decoding
+model:
+  variant: p2_decoding

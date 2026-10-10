@@ -1,0 +1,272 @@
+kind: external_protocol_reference_not_executable_pfd_config
+manuscript: v7.16 Table 3b
+methods:
+- name: YOLO11s
+  config_path: ultralytics/cfg/models/11/yolo11.yaml
+  initialization: yolo11s.pt; COCO pretrained
+  epochs: 100
+  optimizer: Ultralytics auto
+  learning_rate:
+    backbone: framework-selected
+    main: framework-selected
+  weight_decay: 0.0005
+  postprocess: native NMS
+  native_command_template: yolo detect train model=yolo11s.pt data=DATA_YAML epochs=100
+    imgsz=640 optimizer=auto weight_decay=0.0005 seed=SEED
+  input_size: 640
+  num_classes: 1
+  seeds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  checkpoint_selection: best validation checkpoint
+  tables:
+  - 3b
+  - '4'
+  - 11a
+  execution: native external framework; not implemented as a PFD variant
+  historical_training_commit_confirmed: false
+  source_lock:
+    repository: https://github.com/ultralytics/ultralytics
+    commit: 69c95d1add13a232382e53b3aa5094ec0c7738db
+    config_sha256: 43d8a7c86acc77282ddf4966d6526e091e5b064c140ed4a6e4c0b68ecbc3784c
+    config_url: https://raw.githubusercontent.com/ultralytics/ultralytics/69c95d1add13a232382e53b3aa5094ec0c7738db/ultralytics/cfg/models/11/yolo11.yaml
+    scope: current verified reference snapshot; not evidence of historical training
+      revision
+- name: YOLO26s one-to-one
+  config_path: ultralytics/cfg/models/26/yolo26.yaml
+  initialization: yolo26s.pt; Objects365v1 to COCO pretrained, as reported in manuscript
+  epochs: 100
+  optimizer: Ultralytics auto
+  learning_rate:
+    backbone: framework-selected
+    main: framework-selected
+  weight_decay: 0.0005
+  postprocess: native one-to-one NMS-free inference
+  native_command_template: yolo detect train model=yolo26s.pt data=DATA_YAML epochs=100
+    imgsz=640 optimizer=auto weight_decay=0.0005 seed=SEED
+  input_size: 640
+  num_classes: 1
+  seeds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  checkpoint_selection: best validation checkpoint
+  tables:
+  - 3b
+  - '4'
+  - 11a
+  execution: native external framework; not implemented as a PFD variant
+  historical_training_commit_confirmed: false
+  source_lock:
+    repository: https://github.com/ultralytics/ultralytics
+    commit: 69c95d1add13a232382e53b3aa5094ec0c7738db
+    config_sha256: b1d1fa0c69eced64f9939536038bd8d697c32e72200b34187a767de431af7ef0
+    config_url: https://raw.githubusercontent.com/ultralytics/ultralytics/69c95d1add13a232382e53b3aa5094ec0c7738db/ultralytics/cfg/models/26/yolo26.yaml
+    scope: current verified reference snapshot; not evidence of historical training
+      revision
+- name: RT-DETR-R18 official
+  config_path: rtdetr_pytorch/configs/rtdetr/rtdetr_r18vd_6x_coco.yml
+  initialization: COCO pretrained rtdetr_r18vd_6x_coco
+  epochs: 72
+  optimizer: AdamW
+  learning_rate:
+    backbone: 1.0e-05
+    main: 0.0001
+  weight_decay: 0.0001
+  postprocess: native RT-DETR postprocess
+  input_size: 640
+  num_classes: 1
+  seeds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  checkpoint_selection: best validation checkpoint
+  tables:
+  - 3b
+  - '4'
+  execution: native external framework; not implemented as a PFD variant
+  historical_training_commit_confirmed: false
+  source_lock:
+    repository: https://github.com/lyuwenyu/RT-DETR
+    commit: df2a96c8c3a098567a1149bf0248da6efe6d495d
+    config_sha256: 0c1ee4bcfff1a678a1691bb1dfe6b6d3a4d62a1a52fb10b23197016ee7e6f0ea
+    config_url: https://raw.githubusercontent.com/lyuwenyu/RT-DETR/df2a96c8c3a098567a1149bf0248da6efe6d495d/rtdetr_pytorch/configs/rtdetr/rtdetr_r18vd_6x_coco.yml
+    scope: current verified reference snapshot; not evidence of historical training
+      revision
+  native_command_template: python tools/train.py -c DATASET_ADAPTED_CONFIG.yml -t
+    PRETRAINED_CHECKPOINT.pth --seed SEED
+  native_working_directory: rtdetr_pytorch
+- name: RT-DETRv2-R18
+  config_path: rtdetrv2_pytorch/configs/rtdetrv2/rtdetrv2_r18vd_sp2_120e_coco.yml
+  initialization: COCO pretrained rtdetrv2_r18vd_sp2_120e_coco
+  epochs: 120
+  optimizer: AdamW
+  learning_rate:
+    backbone: 1.0e-05
+    main: 0.0001
+  weight_decay: 0.0001
+  postprocess: native RT-DETRv2 postprocess
+  input_size: 640
+  num_classes: 1
+  seeds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  checkpoint_selection: best validation checkpoint
+  tables:
+  - 3b
+  - '4'
+  - 11a
+  execution: native external framework; not implemented as a PFD variant
+  historical_training_commit_confirmed: false
+  source_lock:
+    repository: https://github.com/lyuwenyu/RT-DETR
+    commit: df2a96c8c3a098567a1149bf0248da6efe6d495d
+    config_sha256: 31d11a06fcf395c7363fa341ab5134e77ebb604b1e53d281b7333eb35bfc0e59
+    config_url: https://raw.githubusercontent.com/lyuwenyu/RT-DETR/df2a96c8c3a098567a1149bf0248da6efe6d495d/rtdetrv2_pytorch/configs/rtdetrv2/rtdetrv2_r18vd_sp2_120e_coco.yml
+    scope: current verified reference snapshot; not evidence of historical training
+      revision
+  native_command_template: python tools/train.py -c DATASET_ADAPTED_CONFIG.yml -t
+    PRETRAINED_CHECKPOINT.pth --seed SEED
+  native_working_directory: rtdetrv2_pytorch
+- name: D-FINE-S
+  config_path: configs/dfine/custom/dfine_hgnetv2_s_custom.yml
+  initialization: pretrained D-FINE-S checkpoint; exact historical file hash unavailable
+  epochs: 220
+  optimizer: AdamW
+  learning_rate:
+    backbone: 0.0002
+    main: 0.0004
+  weight_decay: 0.0001
+  total_batch_size: 64
+  postprocess: native D-FINE postprocess
+  input_size: 640
+  num_classes: 1
+  seeds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  checkpoint_selection: best validation checkpoint
+  tables:
+  - 3b
+  - '4'
+  - 11a
+  execution: native external framework; not implemented as a PFD variant
+  historical_training_commit_confirmed: false
+  source_lock:
+    repository: https://github.com/Peterande/D-FINE
+    commit: 956d1709314c2c6a4df6f34de232054578a7449f
+    config_sha256: 320855741111f0add811a424bdbd2306e6a3885331b9a0eea912d5e565fa2635
+    config_url: https://raw.githubusercontent.com/Peterande/D-FINE/956d1709314c2c6a4df6f34de232054578a7449f/configs/dfine/custom/dfine_hgnetv2_s_custom.yml
+    scope: current verified reference snapshot; not evidence of historical training
+      revision
+  native_command_template: python train.py -c DATASET_ADAPTED_CONFIG.yml -t PRETRAINED_CHECKPOINT.pth
+    --seed SEED --output-dir OUTPUT_DIRECTORY
+  native_working_directory: official repository root
+- name: DEIM-D-FINE-S
+  config_path: configs/deim_dfine/deim_hgnetv2_s_coco.yml
+  initialization: pretrained D-FINE-S/DEIM checkpoint; exact historical file hash
+    unavailable
+  epochs: 132
+  optimizer: AdamW
+  learning_rate:
+    backbone: 0.0002
+    main: 0.0004
+  weight_decay: 0.0001
+  total_batch_size: 64
+  training_detail: dense one-to-one training
+  postprocess: native DEIM postprocess
+  input_size: 640
+  num_classes: 1
+  seeds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  checkpoint_selection: best validation checkpoint
+  tables:
+  - 3b
+  - '4'
+  - 11a
+  execution: native external framework; not implemented as a PFD variant
+  historical_training_commit_confirmed: false
+  source_lock:
+    repository: https://github.com/Intellindust-AI-Lab/DEIM
+    commit: 09d35d53d39ee3145a1e61e3a989b28b9468d1dd
+    config_sha256: 111e2fc29832d1f51ae35730e74b372a4d18943bc4cf97829e7d3f54c58ddc11
+    config_url: https://raw.githubusercontent.com/Intellindust-AI-Lab/DEIM/09d35d53d39ee3145a1e61e3a989b28b9468d1dd/configs/deim_dfine/deim_hgnetv2_s_coco.yml
+    scope: current verified reference snapshot; not evidence of historical training
+      revision
+  native_command_template: python train.py -c DATASET_ADAPTED_CONFIG.yml -t PRETRAINED_CHECKPOINT.pth
+    --seed SEED --output-dir OUTPUT_DIRECTORY
+  native_working_directory: official repository root
+- name: MRtic-Det reimplementation
+  config_path: null
+  initialization: not established by available manuscript table or historical source
+    records
+  epochs: 300
+  optimizer: AdamW
+  learning_rate:
+    backbone: 0.0001
+    main: 0.0001
+  weight_decay: 0.0001
+  nominal_batch_size: 64
+  postprocess: native four-scale output/postprocess
+  native_command_template: null
+  missing: historical reimplementation source, configuration, revision and checkpoint
+  input_size: 640
+  num_classes: 1
+  seeds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  checkpoint_selection: best validation checkpoint
+  tables:
+  - 3b
+  - '4'
+  - 11a
+  execution: native external framework; not implemented as a PFD variant
+  historical_training_commit_confirmed: false
+own_system_arms:
+- name: RT-DETR-R18 base
+  config: configs/pfd/system/kfpfd_baseline.yaml
+- name: PFD-DETR
+  config: configs/pfd/system/kfpfd_full.yaml
+evaluation_entrypoint: tools/evaluate_predictions.py
+prediction_contract:
+  format: COCO result list
+  bbox: xywh in original pixels
+  image_id: exact annotation image ID
+  category_id: exact annotation category ID
+  score_floor: 0.001
+  max_detections: 100
+  native_postprocessing_required: true
+record_before_new_run:
+- official git commit
+- resolved native configuration
+- checkpoint SHA-256
+- split manifest and annotation SHA-256
+- seed
+- framework and hardware versions
+- native validation/test predictions
+notes:
+- Retain native external training recipes; do not silently apply the controlled random-initialization
+  PFD recipe.
+- Dataset paths and one-class adaptation require a native dataset configuration. The
+  reference files alone are not a completed full-data experiment.
+- Current official snapshot parameter counts need not equal the historical manuscript
+  rows.

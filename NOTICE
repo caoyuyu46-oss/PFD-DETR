@@ -1,0 +1,35 @@
+PFD-DETR
+
+This distribution is based on the official RT-DETR repository by the RT-DETR authors.
+Upstream repository: https://github.com/lyuwenyu/RT-DETR
+Upstream commit: df2a96c8c3a098567a1149bf0248da6efe6d495d
+Upstream license: Apache License 2.0
+
+PFD-DETR additions implement SSWR, RDPF, center-support supervision,
+experiment configurations, evaluation tools and a 200-image data sample.
+Original copyright and license notices remain applicable to upstream files.
+The original RT-DETR source remains under Apache License 2.0, preserved in
+LICENSES/Apache-2.0.txt. The SSWR/RDPF additions and sample assets remain under
+Apache License 2.0, except for the explicitly identified derivative files below.
+
+The paper-compatible decoder and classification loss are adapted from
+Ultralytics 8.0.201, distributed under the GNU Affero General Public License v3:
+https://github.com/ultralytics/ultralytics/tree/v8.0.201
+Source files: ultralytics/nn/modules/head.py, ultralytics/models/utils/ops.py,
+and ultralytics/utils/loss.py.
+Derived files: rtdetr_pytorch/src/zoo/rtdetr/pfd_decoder.py,
+rtdetr_pytorch/src/zoo/rtdetr/pfd_criterion.py,
+rtdetr_pytorch/src/zoo/rtdetr/pfd_model.py, and pfd_runtime/engine.py.
+Paper-compatible initialization and optimizer grouping also refer to
+ultralytics/utils/torch_utils.py and ultralytics/engine/trainer.py.
+The integrated PFD-DETR program is distributed under AGPL-3.0 in LICENSE.
+Original third-party notices and their underlying licenses remain applicable.
+
+External controls downloaded separately retain their own upstream terms.
+They are not relicensed by this distribution. See docs/CONTROLS.md.
+
+The PyTorch data transforms were adapted to torchvision 0.16.2.
+New PFD modules are registered in the original RT-DETR package.
+The English release omits the upstream Chinese README.
+Ordinary explanatory comments and docstrings were removed for this distribution;
+copyright, attribution and licensing notices were retained.

@@ -1,0 +1,8 @@
+_base_: ../base.yaml
+experiment: system_mango_full
+data: configs/data/mango.yaml
+initialization:
+  type: coco
+  checkpoint: weights/rtdetr_r18vd_6x_coco.pth
+model:
+  variant: full

@@ -1,0 +1,9 @@
+_base_: ../base.yaml
+experiment: mechanism_wtconv
+model:
+  sswr:
+    mode: wtconv
+    kernel_size: 5
+    wt_levels: 1
+    wt_type: db1
+    bias: true

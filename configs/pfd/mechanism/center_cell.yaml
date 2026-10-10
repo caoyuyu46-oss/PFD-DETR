@@ -1,0 +1,5 @@
+_base_: ../base.yaml
+experiment: mechanism_center_cell
+model:
+  rdpf:
+    target: center_cell

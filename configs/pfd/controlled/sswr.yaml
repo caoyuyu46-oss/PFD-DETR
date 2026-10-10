@@ -1,0 +1,4 @@
+_base_: ../base.yaml
+experiment: controlled_sswr
+model:
+  variant: sswr

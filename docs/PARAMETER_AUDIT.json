@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "kind": "untrained_architecture_profile",
+  "accuracy_and_latency_remeasured": false,
+  "official_repository": "https://github.com/lyuwenyu/RT-DETR",
+  "official_commit": "df2a96c8c3a098567a1149bf0248da6efe6d495d",
+  "reference_ultralytics_version": "8.0.201",
+  "reference_wheel_sha256": "58e5771e84cf240b8b60407ae128b8d839400d1ac7697532f2717cd27baf152a",
+  "official_r18_shape_80_class_parameters": 20184464,
+  "official_r18_decoder_layers": 3,
+  "official_headline_20M_is_not_an_exact_20000000_parameter_count": true,
+  "parameter_definition": "The primary parameters field counts nn.Parameter elements with requires_grad=True. Stored and frozen parameter elements are reported separately; fixed buffers are excluded. Counts are independent of THOP hook coverage.",
+  "GFLOPs_definition": "Executed nn.Conv2d and nn.Linear hooks only; excludes normalization, activations, pooling, fixed Haar/Sobel, local statistics, spatial rearrangement, interpolation, elementwise operations, attention matrix products, functional projections inside MultiheadAttention, and sampling operations.",
+  "MAC_to_FLOP_multiplier": 2,
+  "runtime": {
+    "python": "3.11.14",
+    "torch": "2.1.2+cpu",
+    "thop": "0.1.1-2209072238"
+  },
+  "input_shape": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "models": [
+    {
+      "variant": "baseline",
+      "parameters": 20082772,
+      "stored_parameters": 20082772,
+      "frozen_parameters": 0,
+      "trainable_parameters": 20082772,
+      "MACs": 28936985600,
+      "GFLOPs": 57.8739712,
+      "added_GFLOPs": 0.0
+    },
+    {
+      "variant": "sswr",
+      "parameters": 20094481,
+      "stored_parameters": 20094481,
+      "frozen_parameters": 0,
+      "trainable_parameters": 20094481,
+      "MACs": 28994550400,
+      "GFLOPs": 57.9891008,
+      "added_GFLOPs": 0.1151296
+    },
+    {
+      "variant": "support",
+      "parameters": 20116630,
+      "stored_parameters": 20133270,
+      "frozen_parameters": 16640,
+      "trainable_parameters": 20116630,
+      "MACs": 29151206400,
+      "GFLOPs": 58.3024128,
+      "added_GFLOPs": 0.4284416
+    },
+    {
+      "variant": "sswr_support",
+      "parameters": 20128339,
+      "stored_parameters": 20144979,
+      "frozen_parameters": 16640,
+      "trainable_parameters": 20128339,
+      "MACs": 29208771200,
+      "GFLOPs": 58.4175424,
+      "added_GFLOPs": 0.5435712
+    },
+    {
+      "variant": "rdpf",
+      "parameters": 20133270,
+      "stored_parameters": 20133270,
+      "frozen_parameters": 0,
+      "trainable_parameters": 20133270,
+      "MACs": 29256064000,
+      "GFLOPs": 58.512128,
+      "added_GFLOPs": 0.6381568
+    },
+    {
+      "variant": "full",
+      "parameters": 20144979,
+      "stored_parameters": 20144979,
+      "frozen_parameters": 0,
+      "trainable_parameters": 20144979,
+      "MACs": 29313628800,
+      "GFLOPs": 58.6272576,
+      "added_GFLOPs": 0.7532864
+    }
+  ],
+  "support_only_note": "Auxiliary-support arms retain frozen residual expansion and beta tensors for shared-state alignment. Their 16,640 stored elements are not trainable and are not executed.",
+  "modules": {
+    "SSWR": {
+      "learnable_parameters": 11709,
+      "stored_parameters": 11709,
+      "frozen_parameters": {},
+      "fixed_filter_buffers_excluded": {
+        "wavelet.kernels": 512,
+        "structure.sobel_x": 9,
+        "structure.sobel_y": 9
+      }
+    },
+    "RDPF": {
+      "learnable_parameters": 50498,
+      "stored_parameters": 50498,
+      "frozen_parameters": {},
+      "fixed_filter_buffers_excluded": {}
+    },
+    "RDPF_auxiliary_only": {
+      "learnable_parameters": 33858,
+      "stored_parameters": 50498,
+      "frozen_parameters": {
+        "beta": 256,
+        "expand.weight": 16384
+      },
+      "fixed_filter_buffers_excluded": {}
+    },
+    "PlainResidual_hidden41": {
+      "learnable_parameters": 11813,
+      "stored_parameters": 11813,
+      "frozen_parameters": {},
+      "fixed_filter_buffers_excluded": {}
+    }
+  },
+  "paper_values_not_reproduced_by_this_graph": {
+    "baseline_parameters": 20000000,
+    "full_parameters_rounded_M": 20.062,
+    "baseline_GFLOPs": 54.8,
+    "full_GFLOPs": 55.584,
+    "SSWR_added_GFLOPs": 0.124,
+    "RDPF_added_GFLOPs": 0.66
+  },
+  "commands": [
+    "python tools/profile_model.py --config configs/pfd/controlled/baseline.yaml --output profile_baseline.json",
+    "python tools/profile_model.py --config configs/pfd/controlled/full.yaml --output profile_full.json"
+  ],
+  "profile_script_sha256": "f513915c3d21e72184af8cfa5ba4b9a3c9dad6b234b866cc9dcfdd8a7e623f5d"
+}

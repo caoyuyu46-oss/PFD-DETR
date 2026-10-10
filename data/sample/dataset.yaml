@@ -1,0 +1,18 @@
+{
+  "path": "data/sample",
+  "names": [
+    "Pear fruitlet"
+  ],
+  "train": {
+    "images": "images/train",
+    "annotations": "annotations/train.json"
+  },
+  "val": {
+    "images": "images/val",
+    "annotations": "annotations/val.json"
+  },
+  "test": {
+    "images": "images/test",
+    "annotations": "annotations/test.json"
+  }
+}

@@ -1,0 +1,429 @@
+experiments:
+- config: configs/pfd/controlled/baseline.yaml
+  table: 5a,5b,A.1,10a,10b,12a,12b,A.3
+  tables:
+  - 5a
+  - 5b
+  - A.1
+  - 10a
+  - 10b
+  - 12a
+  - 12b
+  - A.3
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/controlled/full.yaml
+  table: 5a,5b,A.1,10a,10b,12a,12b,A.3
+  tables:
+  - 5a
+  - 5b
+  - A.1
+  - 10a
+  - 10b
+  - 12a
+  - 12b
+  - A.3
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/controlled/rdpf.yaml
+  table: 5a,5b,A.1,10a,10b,12a,12b,A.3
+  tables:
+  - 5a
+  - 5b
+  - A.1
+  - 10a
+  - 10b
+  - 12a
+  - 12b
+  - A.3
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/controlled/sswr.yaml
+  table: 5a,5b,A.1,10a,10b,12a,12b,A.3
+  tables:
+  - 5a
+  - 5b
+  - A.1
+  - 10a
+  - 10b
+  - 12a
+  - 12b
+  - A.3
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/controlled/sswr_support.yaml
+  table: 5a,5b,A.1
+  tables:
+  - 5a
+  - 5b
+  - A.1
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/controlled/support.yaml
+  table: 5a,5b,A.1
+  tables:
+  - 5a
+  - 5b
+  - A.1
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/mechanism/baseline.yaml
+  table: 6b
+  tables:
+  - 6b
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/mechanism/binary_box.yaml
+  table: 8b
+  tables:
+  - 8b
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/mechanism/center_cell.yaml
+  table: 8b
+  tables:
+  - 8b
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/mechanism/deep_only.yaml
+  table: 8b
+  tables:
+  - 8b
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/mechanism/default.yaml
+  table: 6a,6b,8a,8b
+  tables:
+  - 6a
+  - 6b
+  - 8a
+  - 8b
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/mechanism/dual_capacity.yaml
+  table: 6b
+  tables:
+  - 6b
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/mechanism/freqfusion.yaml
+  table: 8a
+  tables:
+  - 8a
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/mechanism/gaussian.yaml
+  table: 8b
+  tables:
+  - 8b
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/mechanism/mean_bce.yaml
+  table: 8b
+  tables:
+  - 8b
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/mechanism/no_support_loss_gate.yaml
+  table: 8a
+  tables:
+  - 8a
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/mechanism/no_support_loss_target.yaml
+  table: 8b
+  tables:
+  - 8b
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/mechanism/p2_decoding.yaml
+  table: 6b
+  tables:
+  - 6b
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/mechanism/rdpf_absolute.yaml
+  table: 8a
+  tables:
+  - 8a
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/mechanism/rdpf_ambiguity.yaml
+  table: 8a
+  tables:
+  - 8a
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/mechanism/rdpf_deep_only.yaml
+  table: 8a
+  tables:
+  - 8a
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/mechanism/rdpf_ungated.yaml
+  table: 8a
+  tables:
+  - 8a
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/mechanism/shallow_only.yaml
+  table: 8b
+  tables:
+  - 8b
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/mechanism/sswr_no_descriptors.yaml
+  table: 6a
+  tables:
+  - 6a
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/mechanism/sswr_plain_residual.yaml
+  table: 6a
+  tables:
+  - 6a
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/mechanism/sswr_single.yaml
+  table: 6a
+  tables:
+  - 6a
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/mechanism/sswr_uniform.yaml
+  table: 6a
+  tables:
+  - 6a
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/mechanism/support_only.yaml
+  table: 8a
+  tables:
+  - 8a
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/mechanism/wtconv.yaml
+  table: 6a
+  tables:
+  - 6a
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/sensitivity/default.yaml
+  table: 9b
+  tables:
+  - 9b
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/sensitivity/floor_005.yaml
+  table: 9b
+  tables:
+  - 9b
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/sensitivity/floor_020.yaml
+  table: 9b
+  tables:
+  - 9b
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/sensitivity/support_010.yaml
+  table: 9b
+  tables:
+  - 9b
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/sensitivity/support_050.yaml
+  table: 9b
+  tables:
+  - 9b
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/sensitivity/windows_3_5_7.yaml
+  table: 9b
+  tables:
+  - 9b
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/sensitivity/windows_3_7_11.yaml
+  table: 9b
+  tables:
+  - 9b
+  initialization: random
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/system/kfpfd_baseline.yaml
+  table: '4'
+  tables:
+  - '4'
+  initialization: coco
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/system/kfpfd_full.yaml
+  table: '4'
+  tables:
+  - '4'
+  initialization: coco
+  dataset: kfpfd
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/system/kfpfd_rdpf.yaml
+  table: supplementary
+  tables: []
+  initialization: coco
+  dataset: kfpfd
+  role: supplementary configuration
+  historical_results_reproduced: false
+- config: configs/pfd/system/kfpfd_sswr.yaml
+  table: supplementary
+  tables: []
+  initialization: coco
+  dataset: kfpfd
+  role: supplementary configuration
+  historical_results_reproduced: false
+- config: configs/pfd/system/mango_baseline.yaml
+  table: 11a,11b
+  tables:
+  - 11a
+  - 11b
+  initialization: coco
+  dataset: mango
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/system/mango_full.yaml
+  table: 11a,11b
+  tables:
+  - 11a
+  - 11b
+  initialization: coco
+  dataset: mango
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/system/mango_rdpf.yaml
+  table: 11b
+  tables:
+  - 11b
+  initialization: coco
+  dataset: mango
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/system/mango_sswr.yaml
+  table: 11b
+  tables:
+  - 11b
+  initialization: coco
+  dataset: mango
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/system/minneapple_local_baseline.yaml
+  table: 11a,11b
+  tables:
+  - 11a
+  - 11b
+  initialization: coco
+  dataset: minneapple_local
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/system/minneapple_local_full.yaml
+  table: 11a,11b
+  tables:
+  - 11a
+  - 11b
+  initialization: coco
+  dataset: minneapple_local
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/system/minneapple_local_rdpf.yaml
+  table: 11b
+  tables:
+  - 11b
+  initialization: coco
+  dataset: minneapple_local
+  role: executable release configuration
+  historical_results_reproduced: false
+- config: configs/pfd/system/minneapple_local_sswr.yaml
+  table: 11b
+  tables:
+  - 11b
+  initialization: coco
+  dataset: minneapple_local
+  role: executable release configuration
+  historical_results_reproduced: false
+seeds:
+- 0
+- 1
+- 2
+- 3
+- 4
+evaluation_max_detections: 100

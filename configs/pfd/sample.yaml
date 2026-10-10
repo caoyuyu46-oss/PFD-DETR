@@ -1,0 +1,7 @@
+_base_: base.yaml
+experiment: sample
+data: data/sample/dataset.yaml
+training:
+  epochs: 1
+  batch_size: 1
+  nominal_batch_size: 1

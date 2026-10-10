@@ -1,0 +1,13 @@
+path: data/minneapple_local
+names:
+- fruit
+train:
+  images: images/train
+  annotations: annotations/train.json
+val:
+  images: images/val
+  annotations: annotations/val.json
+test:
+  images: images/val
+  annotations: annotations/val.json
+evaluation_split: development

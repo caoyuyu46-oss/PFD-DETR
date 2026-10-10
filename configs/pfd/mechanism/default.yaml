@@ -1,0 +1,3 @@
+_base_: ../base.yaml
+experiment: mechanism_default
+model: {}

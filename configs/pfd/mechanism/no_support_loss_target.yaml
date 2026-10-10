@@ -1,0 +1,5 @@
+_base_: ../base.yaml
+experiment: mechanism_no_support_loss_target
+model:
+  rdpf:
+    support_gain: 0.0

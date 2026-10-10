@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/lyuwenyu/RT-DETR",
+  "commit": "df2a96c8c3a098567a1149bf0248da6efe6d495d",
+  "archive_url": "https://codeload.github.com/lyuwenyu/RT-DETR/zip/df2a96c8c3a098567a1149bf0248da6efe6d495d",
+  "archive_sha256": "e6014ae32d2d384799e353a7a6a511aaef1dfad77763492738dfef70e714d6564",
+  "pytorch_directory": "rtdetr_pytorch",
+  "pretrained_url": "https://github.com/lyuwenyu/storage/releases/download/v0.1/rtdetr_r18vd_dec3_6x_coco_from_paddle.pth",
+  "pretrained_local_alias": "weights/rtdetr_r18vd_6x_coco.pth",
+  "pretrained_sha256": "3ba8b5c909c9a1c4f21e96d0a7251ab1a485093955ca327d0061fef8d33c66f0"
+}
